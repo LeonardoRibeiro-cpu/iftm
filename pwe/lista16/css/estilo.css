@@ -39,10 +39,10 @@ section p{
     margin: 0px 20px 30px 20px;
   
 }
-.container h2{
+.section h2{
     margin-bottom: 5px;
 }
-.container div p{
+section div p{
     text-align: justify;
 }
 .container summary{
