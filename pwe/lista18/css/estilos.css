@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+ h2{
+    color: darkred;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+}
+header nav{
+   justify-items: center;
+}
+header nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 20px 0px 15px 0px;
+}
+hr{
+    border: none;
+    border-top: 2px solid darkred;
+    width: 16%;
+}
+
+.carreira{
+    text-align: center;
+}
+.carreira h1{
+    margin: 70px 0px 55px 0px;
+}
+.carreira button{
+    background-color: rgb(197, 49, 23);
+    margin: 30px 0px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+.carreira button:hover{
+    background-color: rgb(255, 115, 0);
+}
+
+.tecnologias{
+    background-color: rgb(199, 199, 199);
+    justify-items: center;
+}
+h2{
+    padding: 40px 0px 15px 0px;
+    font-size: 25px;
+}
+.tecnologias div{
+    margin-right: 100px;
+    margin-left: 100px;
+}
+.tecnologias>div>div{
+  justify-items: center;
+  margin: 40px 30px 30px 30px;
+  padding-bottom: 30px;
+  text-align: justify;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.container h3{
+    padding: 20px 0px 30px 0px;
+}
+.portifolio{
+    justify-items: center;
+}
+.portifolio>div{
+    display: flex;
+    flex-direction: column;
+}
+.portifolio>div>div{
+    display: flex;
+    text-align: justify;
+    margin: 40px 100px 30px 100px;
+}
+.portifolio>div>div>div>img{
+    width: 300px;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
