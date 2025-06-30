@@ -204,7 +204,7 @@ footer img{
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 .voltar-topo:hover{
    background-color: rgb(150, 15, 70);
