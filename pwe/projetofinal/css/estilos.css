@@ -1,38 +1,33 @@
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kapakana:wght@300..400&family=Syne+Tactile&display=swap");
+/*  Importação de Fontes */
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredericka+the+Great&family=Quicksand&display=swap");
+
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: "Quicksand", sans-serif;
   background-image: url('../img/v722-aum-35a.jpg');
- 
 }
-h1,
-h2,
-h3 {
+
+/* Titulos */
+h1, h2, h3 {
   font-family: "Dancing Script", cursive;
   color: rgb(85, 45, 19);
 }
+
+/* Cabeçalho */
 header {
   background-color: white;
 }
-img {
-  transition: transform 0.3s ease;
-}
 
-img:hover {
-  transform: scale(1.05);
-}
 .logo {
   display: inline-block;
-  padding: 10px 0px 10px 5px;
+  padding: 10px 0 10px 5px;
   vertical-align: middle;
 }
-
 
 .logo > img,
 .logo > h1 {
@@ -48,11 +43,14 @@ img:hover {
   font-size: 70px;
   font-family: "Dancing Script", cursive;
 }
+
 header h1:hover {
   background-image: url("../img/YTiF.gif");
   background-position: 150px center;
   background-size: 120px;
 }
+
+/* Navegação */
 header nav ul {
   display: flex;
   justify-content: center;
@@ -60,42 +58,56 @@ header nav ul {
   list-style: none;
   font-family: "Fredericka the Great", cursive;
 }
+
 header nav ul li {
-  padding: 25px 15px 25px 15px;
+  padding: 25px 15px;
   font-size: 20px;
 }
+
 header nav ul li a:link,
 header nav ul li a:visited {
   color: rgb(56, 31, 14);
   text-decoration: none;
   font-weight: bold;
 }
+
 header nav ul li a:hover {
   color: white;
   background-image: url("../img/YTiF.gif");
   background-position: 150px center;
   background-size: 120px;
 }
+
+/* Seções */
 section {
-  max-width: 100%;
   width: 90%;
   background-color: white;
   text-align: left;
   margin: auto;
   border-radius: 20px;
 }
+
+section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Título da Página*/
 .tituloPagina {
   box-shadow: 3px 3px 5px;
 }
+
 .tituloPagina h2 {
   font-size: 60px;
   text-align: center;
   margin-top: 20px;
   transition: all 0.6s;
 }
+
 .tituloPagina h2:hover {
   transform: scale(1.1);
 }
+
 .tituloPagina p {
   font-size: 30px;
   margin-bottom: 20px;
@@ -105,11 +117,13 @@ section {
   font-family: "Dancing Script", cursive;
 }
 
+/* Conteúdo com Texto e Imagens */
 section h3 {
-  padding: 20px 0px 20px 20px;
+  padding: 20px 0 20px 20px;
   transition: 0.5s;
   font-size: 70px;
 }
+
 section h3:hover {
   letter-spacing: 5px;
 }
@@ -118,78 +132,100 @@ section h3:hover {
   display: flex;
   flex-direction: row;
 }
+
 .txtCCAA > .container > div {
   width: 100%;
   padding: 20px;
   font-size: 20px;
 }
+
 .txtCCAA > .container div p {
   text-align: left;
 }
+
 .txtCCAA > .container div img {
   display: block;
-  border: 10px solid  rgb(165, 77, 42);;
+  border: 10px solid rgb(165, 77, 42);
   margin: auto;
   box-shadow: 10px 12px 10px rgb(56, 56, 56);
-}
-.txtCCAA > .container div img,
-.containerIMG,
-.containerIMG img {
   border-radius: 20px;
 }
-.gTbC{
+
+.txtCCAA > .container > div > p:nth-of-type(2),
+.txtCCAA > .container > div > p:nth-of-type(3) {
+  padding-bottom: 30px;
+}
+
+
+.gTbC {
   text-align: center;
   margin-bottom: 10px;
 }
+
 .gTbC p {
   padding: 10px 140px 20px 140px;
   font-size: 22px;
-  
 }
+
+.gTbC p:nth-last-of-type(2) {
+  padding-bottom: 1px;
+}
+
 .containerIMG {
   width: 100%;
   display: flex;
   justify-content: center;
   background-color: rgb(236, 142, 142);
   margin-bottom: 30px;
-}
-.containerIMG img {
-  padding: 20px;
-  margin: 30px 20px 30px 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
-  background-color: rgb(165, 77, 42);
+  border-radius: 20px;
 }
 
+.containerIMG img {
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+  margin: 30px 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  background-color: rgb(165, 77, 42);
+  border-radius: 20px;
+}
+
+/* Rodapé  */
 footer {
   padding: 30px;
-  background-color: white;
+  background-color: #ecbda0;
   text-align: center;
-  background-color: #ecbda0; 
   color: #4a1f0f;
-  cursor: pointer;
 }
-footer>div{
+
+footer > div {
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
 }
-footer h3{
+
+footer h3 {
   font-size: 40px;
   padding-bottom: 20px;
 }
-footer p{
-  padding: 0px 100px 20px 100px;
-}
-footer h4{
-  border-bottom: 2px solid orange;
 
+footer p {
+  padding: 0 100px 20px 100px;
 }
-footer img{
+
+footer h4 {
+  border-bottom: 2px solid orange;
+}
+
+footer img {
   padding-top: 10px;
+  cursor: pointer;
 }
-.voltar-topo{
-  display:flex;
+
+/*Botão Voltar ao Topo */
+.voltar-topo {
+  display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
@@ -204,12 +240,15 @@ footer img{
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 50%;
-  transition: all 0.3s;
+  transition: all 0.3s ease;
 }
-.voltar-topo:hover{
-   background-color: rgb(150, 15, 70);
-  transform: scale(1.1)
+
+.voltar-topo:hover {
+  background-color: rgb(150, 15, 70);
+  transform: scale(1.1);
 }
+
+/* Responsividade  */
 @media screen and (max-width: 767px) {
   .logo > h1 {
     font-size: 30px;
@@ -224,6 +263,10 @@ footer img{
   header nav ul li {
     font-size: 16px;
     padding: 10px 0;
+  }
+
+  section {
+    width: 90%;
   }
 
   section h3 {
@@ -244,11 +287,11 @@ footer img{
 
   .container {
     flex-direction: column;
-    
   }
-  .gTbC p{
+
+  .gTbC p {
     font-size: 15px;
-    padding: 0px;
+    padding: 0;
     padding-bottom: 10px;
   }
 
@@ -259,14 +302,16 @@ footer img{
     height: auto;
     text-align: center;
   }
-  footer p{
+
+  footer p {
     font-size: 15px;
-    padding: 0px;
+    padding: 0;
     padding-bottom: 15px;
   }
-  .voltar-topo{
+
+  .voltar-topo {
     font-size: 20px;
     width: 30px;
-   height: 30px
+    height: 30px;
   }
 }
