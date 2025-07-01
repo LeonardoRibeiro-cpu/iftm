@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kapakana:wght@300..400&family=Syne+Tactile&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Fredericka+the+Great&family=Quicksand&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-image: url('../img/v722-aum-35a.jpg');
+ 
+}
+h1,
+h2,
+h3 {
+  font-family: "Dancing Script", cursive;
+  color: rgb(85, 45, 19);
+}
+header {
+  background-color: white;
+}
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+.logo {
+  display: inline-block;
+  padding: 10px 0px 10px 5px;
+  vertical-align: middle;
+}
+
+
+.logo > img,
+.logo > h1 {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo > img {
+  margin-right: 20px;
+}
+
+.logo > h1 {
+  font-size: 70px;
+  font-family: "Dancing Script", cursive;
+}
+header h1:hover {
+  background-image: url("../img/YTiF.gif");
+  background-position: 150px center;
+  background-size: 120px;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(187, 22, 88);
+  list-style: none;
+  font-family: "Fredericka the Great", cursive;
+}
+header nav ul li {
+  padding: 25px 15px 25px 15px;
+  font-size: 20px;
+}
+header nav ul li a:link,
+header nav ul li a:visited {
+  color: rgb(56, 31, 14);
+  text-decoration: none;
+  font-weight: bold;
+}
+header nav ul li a:hover {
+  color: white;
+  background-image: url("../img/YTiF.gif");
+  background-position: 150px center;
+  background-size: 120px;
+}
+section {
+  max-width: 100%;
+  width: 90%;
+  background-color: white;
+  text-align: left;
+  margin: auto;
+  border-radius: 20px;
+}
+.tituloPagina {
+  box-shadow: 3px 3px 5px;
+}
+.tituloPagina h2 {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 20px;
+  transition: all 0.6s;
+}
+.tituloPagina h2:hover {
+  transform: scale(1.1);
+}
+.tituloPagina p {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: underline;
+  padding-top: 2px;
+  font-family: "Dancing Script", cursive;
+}
+
+section h3 {
+  padding: 20px 0px 20px 20px;
+  transition: 0.5s;
+  font-size: 70px;
+}
+section h3:hover {
+  letter-spacing: 5px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.txtCCAA > .container > div {
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+}
+.txtCCAA > .container div p {
+  text-align: left;
+}
+.txtCCAA > .container div img {
+  display: block;
+  border: 10px solid  rgb(165, 77, 42);;
+  margin: auto;
+  box-shadow: 10px 12px 10px rgb(56, 56, 56);
+}
+.txtCCAA > .container div img,
+.containerIMG,
+.containerIMG img {
+  border-radius: 20px;
+}
+.gTbC{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.gTbC p {
+  padding: 10px 140px 20px 140px;
+  font-size: 22px;
+  
+}
+.containerIMG {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(236, 142, 142);
+  margin-bottom: 30px;
+}
+.containerIMG img {
+  padding: 20px;
+  margin: 30px 20px 30px 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+  background-color: rgb(165, 77, 42);
+}
+
+footer {
+  padding: 30px;
+  background-color: white;
+  text-align: center;
+  background-color: #ecbda0; 
+  color: #4a1f0f;
+  cursor: pointer;
+}
+footer>div{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+footer h3{
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+footer p{
+  padding: 0px 100px 20px 100px;
+}
+footer h4{
+  border-bottom: 2px solid orange;
+
+}
+footer img{
+  padding-top: 10px;
+}
+.voltar-topo{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(187, 22, 88);
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.voltar-topo:hover{
+   background-color: rgb(150, 15, 70);
+  transform: scale(1.1)
+}
+@media screen and (max-width: 767px) {
+  .logo > h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  section h3 {
+    font-size: 40px;
+  }
+
+  .tituloPagina h2 {
+    font-size: 36px;
+  }
+
+  .tituloPagina p {
+    font-size: 18px;
+  }
+
+  .txtCCAA > .container div p {
+    font-size: 16px;
+  }
+
+  .container {
+    flex-direction: column;
+    
+  }
+  .gTbC p{
+    font-size: 15px;
+    padding: 0px;
+    padding-bottom: 10px;
+  }
+
+  .containerIMG {
+    flex-direction: column;
+    width: 100%;
+    margin: 20px auto;
+    height: auto;
+    text-align: center;
+  }
+  footer p{
+    font-size: 15px;
+    padding: 0px;
+    padding-bottom: 15px;
+  }
+  .voltar-topo{
+    font-size: 20px;
+    width: 30px;
+   height: 30px
+  }
+}
