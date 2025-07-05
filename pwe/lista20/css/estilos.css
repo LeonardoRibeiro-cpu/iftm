@@ -1,0 +1,171 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+/* versão mobile */
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+}
+
+header nav a:link,
+header nav a:visited {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: black;
+    padding: 4px;
+}
+
+header nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+
+.elephant {
+    padding: 30px;
+}
+
+
+.elephant h1 {
+    font-size: 20px;
+}
+
+input[type="button"] {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: rgb(0, 0, 151);
+}
+section{
+    padding: 30px;
+}
+section img {
+    max-width: 100%;
+    height: auto;
+}
+p{
+    line-height: 1.5em;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.planos>div>div{
+    text-align: center;
+    padding: 30px 0px;
+}
+.planos>div>div p{
+    text-align: justify;
+    font-size: 15px;
+}
+.planos>div>div h2{
+    color: red;
+    font-size: 18px;
+    margin: 10px 0px 20px 0px;
+}
+section:nth-of-type(odd){
+    background-color: rgb(29, 29, 29);
+    color: white;
+    text-align: center;
+}
+section:nth-of-type(odd) p {
+    padding: 30px 0px;
+}
+.aplicativo p{
+    text-align: justify;
+}
+.produtos>div>div{
+    text-align: center;
+    padding: 20px 0px;
+}
+.produtos>div>div p{
+    text-align: justify;
+    padding: 30px 0px;
+}
+figcaption{
+   font-size: 18px;
+   font-weight: bold;
+   padding-top: 15px;
+}
+.produtos input[type="button"]{
+    margin: 0px;
+}
+.profissionais h2{
+    margin-top: 15px;
+}
+.profissionais p{
+    text-align: justify;
+}
+
+footer{
+    padding: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+@media screen and (min-width: 1024px) {
+    header nav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+ 
+
+    header nav ul li a:link,
+    header nav ul li a:visited {
+        font-size: 18px;
+        padding: 20px;
+    }
+    .container{
+       flex-direction: row;
+    }
+    .elephant h1 {
+    font-size: 35px;
+    margin-bottom: 1px;
+    margin-top: 4px;
+}
+    section >div {
+        width: 1200px;
+        margin: auto;
+    }
+    .planos>div>div,.produtos>div>div{
+        padding: 0px 20px;
+    }
+    section{
+        padding: 50px;
+    }
+    figcaption{
+        font-size: 24px;
+    }
+
+   .profissionais>div>div{
+        width: 100%;
+        padding: 20px;
+        
+   }
+    .profissionais h2{
+        padding-top: 20px;
+       text-align: left;
+       font-size: 40px
+   }
+   .profissionais p{
+    font-size: 20px;
+    padding: 30px 0px;
+   }
+   
+}
