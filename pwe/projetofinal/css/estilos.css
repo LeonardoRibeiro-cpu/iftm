@@ -90,7 +90,7 @@ section {
 section img {
   max-width: 100%;
   height: auto;
-  transition: transform 0.3s 
+  transition: transform 0.3s;
 }
 section img:hover{
    transform: scale(1.05);
@@ -185,13 +185,15 @@ section h3:hover {
 }
 
 .containerIMG img {
-  max-width: 100%;
+  display: block;
+  width: 90%;
   height: auto;
   padding: 20px;
   margin: 30px 20px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
   background-color: rgb(165, 77, 42);
   border-radius: 20px;
+  object-fit: contain;
 }
 
 /* Rodapé  */
@@ -301,11 +303,11 @@ footer img {
 
   .containerIMG {
     flex-direction: column;
-    width: 100%;
     margin: 20px auto;
     height: auto;
-    text-align: center;
+    align-items: center;
   }
+  
 
   footer p {
     font-size: 15px;
