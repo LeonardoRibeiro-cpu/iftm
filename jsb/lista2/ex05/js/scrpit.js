@@ -18,5 +18,6 @@ document.write(`<p>Média das idades: ${media} anos</p> <br>`);
 
 indiceAleatorio = Math.floor(Math.random() * qtd);
 vencedor = nomes[indiceAleatorio];
-document.write("Vencedor do almoço:", vencedor);
+document.write(`Vencedor do almoço: ${vencedor}`);
+
 
