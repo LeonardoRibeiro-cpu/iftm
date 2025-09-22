@@ -9,10 +9,11 @@ function exibir() {
     alert("informe um numero");
   else if (isNaN(txt1.value) || isNaN(txt2.value))
     alert("Invalido! digite apenas numeros");
+  else if (txt1.value > 50 || txt2.value > 50)
+    alert("Numero Invalido! Digite apenas numeros de 0 a 50");
   else {
     soma = parseFloat(txt1.value) + parseFloat(txt2.value);
-    media = soma / 2;
-    if (media < 60) alert(`Reprovado faltou ${60 - media} pontos`);
-    else alert(`Aprovado com ${media} pontos`);
+    if (soma < 60) alert(`Reprovado faltou ${60 - soma} pontos`);
+    else alert(`Aprovado com ${soma} pontos`);
   }
 }
