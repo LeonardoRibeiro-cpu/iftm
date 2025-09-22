@@ -1,0 +1,15 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.container>div{
+    padding: 2px;
+}
