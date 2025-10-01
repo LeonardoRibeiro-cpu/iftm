@@ -16,10 +16,19 @@ function CandidatoMaisVotado() {
 }
 
 function atualizarClasseLider() {
-  indiceLider = CandidatoMaisVotado(); // corrigido
+  indiceLider = CandidatoMaisVotado();
+  empate = false;
   for (i = 0; i < candidato.length; i++) {
-    ele = document.getElementById(`candidato${i + 1}`);
-    if (i === indiceLider) {
+    if (
+      i != indiceLider &&
+      candidato[i].votos == candidato[indiceLider].votos
+    ) {
+      empate = true;
+    }
+  }
+  for (i = 0; i < candidato.length; i++) {
+    ele = document.getElementById("candidato" + (i + 1));
+    if (i == indiceLider && !empate) {
       ele.classList.add("lider");
     } else {
       ele.classList.remove("lider");
