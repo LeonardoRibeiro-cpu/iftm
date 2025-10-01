@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  display: inline-block;
+  transition: transform 0.2s linear;
+  padding-bottom: 9px;
+}
+
+@keyframes balancar {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moverHorizontal {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(20px);
+  }
+  50% {
+    transform: translateX(-20px);
+  }
+  75% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.alegre {
+  animation: moverHorizontal 3s ease-in-out infinite;
+}
+
+.nervoso {
+  animation: balancar 0.2s ease-in-out infinite; /* TROQUEI para infinite */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}

@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container,
+.candidato {
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid black; */
+}
+.candidato > div {
+  color: rgb(197, 14, 14);
+  padding: 20px 35px 0px 35px;
+}
+.container > div {
+  padding: 35px;
+  margin: 5px;
+  border: 4px solid black;
+  text-align: center;
+  background-color: rgb(186, 207, 153);
+}
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+.container > div > img {
+  width: 200px;
+  cursor: pointer;
+}
+p:nth-last-of-type(1) {
+  margin: 35px 0px -20px 0px;
+}
+p:nth-last-of-type(2) {
+  margin-bottom: 20px;
+}
+.color {
+  font-size: 30px;
+  color: rgb(197, 14, 14);
+}
+.container > div:hover {
+  background-color: rgb(150, 179, 115);
+}
+.container > .lider {
+  background-color: rgb(224, 114, 114);
+}
+.container > .lider:hover {
+  background-color: rgb(255, 99, 99);
+}
