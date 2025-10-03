@@ -1,0 +1,1 @@
+[engine:junit-jupiter]/[class:com.bootstrap.ex02.Ex02ApplicationTests]/[method:contextLoads()]
