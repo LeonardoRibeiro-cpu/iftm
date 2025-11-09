@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>1) Texto informado pelo usuário na página anterior</h3>
+    <p id="mensagem"></p>
+    <h3>
+      2) Você gostaria de analisar as informações disponiblizada pelo usuário na
+      página anterior?
+    </h3>
+    <form>
+      <select id="selecione">
+        <option>Sim</option>
+        <option>Não</option>
+      </select>
+      <p>
+        OBS: Se você responder "não" na pergunta anterior (2). Por favor informe
+        um novo texto na caixa abaixo:
+      </p>
+      <input type="text" id="novoTexto" />
+      <br />
+      <input type="button" value="Analisar" id="btnAnalisar" />
+      <hr />
+      <h3>3) Quantidade de palavras contidas no texto:<span id="qtd"></span> </span></h3>
+      <div>
+      <label class="destaque">4) Palavras iniciadas com a letra M:</label>
+      <input type="text" id="palavrasM" />
+      </div>
+
+      <div>
+      <label class="destaque">5) Primeira palavara do texto:</label>
+      <input type="text" id="primeiraPalavra" />
+    </div>
+
+    <div>
+      <label class="destaque">6) Segunda palavara do texto:</label>
+      <input type="text" id="segundaPalavra" />
+    </div>
+    <div>
+      <label class="destaque">5) Ultima palavara do texto:</label>
+      <input type="text" id="ultimaPalavra" />
+     
+      <input type="button" value="Abrir pagina do papai noel" id="btnPapaiNoel" />
+       </div>
+    </form>
+    <script src="js/pagina02.js"></script>
+  </body>
+</html>

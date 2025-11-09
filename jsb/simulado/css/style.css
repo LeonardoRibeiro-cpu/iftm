@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+label {
+  margin-left: 5px;
+}
+input[type="text"] {
+  width: 300px;
+  height: 25px;
+  margin-top: 10px;
+  margin: 10px 0px 0px 5px;
+  font-size: 16px;
+  padding: 5px;
+}
+input[type="button"] {
+  display: block;
+  margin-left: 5px;
+}
+select {
+  margin: 5px 5px;
+}
+h3,
+p {
+  margin: 15px 10px;
+}
+form > div {
+  display: block;
+}
+#btnPapaiNoel {
+  display: inline;
+}
+.destaque {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 20px;
+}
+span {
+  margin-left: 5px;
+}
+#btnFalas {
+  color: white;
+  background-color: green;
+  padding: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+}
+#btnFalas:hover {
+  background-color: red;
+}
