@@ -2,6 +2,16 @@ window.addEventListener("DOMContentLoaded", function () {
   const musica = document.getElementById("musicaFundo");
   const btnSom = document.getElementById("btnSom");
   musica.volume = 0.1;
+  document.body.addEventListener(
+    "click",
+    () => {
+      if (musica.muted) {
+        musica.muted = false;
+        musica.play();
+      }
+    },
+    { once: true }
+  );
   btnSom.addEventListener("click", () => {
     if (musica.muted) {
       musica.muted = false;
