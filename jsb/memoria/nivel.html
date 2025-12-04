@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Elemental Beasts</title>
+  </head>
+  <body>
+    <audio id="musicaFundo" autoplay loop>
+      <source
+        src="music/520937__mrthenoronha__8-bit-game-intro-loop.wav"
+        type="audio/wav"
+      />
+    </audio>
+    <audio id="somClick">
+      <source src="music/click-button-131479.mp3" type="audio/mp3" />
+    </audio>
+    <header class="header-gamer">
+      <img src="img/logotipoInicial.png" alt="Logo" class="logo-gamer" />
+      <h1 class="titulo-gamer">Elemental Beasts</h1>
+      <nav>
+        <ul>
+          <button id="btnSom">🔊</button>
+          <li><a href="index.html">Entrar</a></li>
+          <li><a href="cadastro.html">Cadastre-se</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-nivel">
+      <section class="nivel">
+        <img src="img/logotipo.png" alt="" width="400px" />
+        <h3>Escolha o nivel</h3>
+        <form class="form-nivel">
+          <input type="button" value="Fácil" id="btnFacil" />
+          <input type="button" value="Médio" id="btnMedio" />
+          <input type="button" value="Difícil" id="btnDificil" />
+        </form>
+      </section>
+    </main>
+    <footer class="footer-gamer">
+      <p>⚡ Jogo da Memória — Elemental Beasts ⚔</p>
+      <span class="footer-sub">Criado por Leonardo • 2025</span>
+      <p class="footer-sub">
+        Música de fundo: “8 Bit Game Intro Loop” — por Mrthenoronha (Freesound).
+      </p>
+      <p class="footer-sub">
+        Licenciada sob CC BY-NC 4.0. Link:
+        https://freesound.org/people/Mrthenoronha/sounds/520937/
+      </p>
+    </footer>
+    <script src="js/music.js"></script>
+    <script src="js/nivel.js"></script>
+  </body>
+</html>
