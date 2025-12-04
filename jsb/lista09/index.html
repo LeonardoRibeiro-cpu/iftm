@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form >
+        <label >a) Data de nascimento: </label>
+        <input type="text" id="nascimento">
+        <input type="button" value="Validar" id="btnValidaNascimento">
+    </form>
+    <form >
+        <label >b) CPF (jwifi): </label>
+        <input type="text" id="cpf" onKeyPress="inserirMascara('cpf','xxx.xxx.xxx-xx')"placeholder="000.000.000-00">
+        <input type="button" value="Validar" id="btnValidaCpf">
+    </form>
+    <form >
+        <label >c) Número de matricula de um aluno: </label>
+        <input type="text" id="matricula">
+        <input type="button" value="Validar" id="btnValidaMatricula">
+    </form>
+    <form >
+        <label >d) Código de uma disciplina do IFTM(jwifi): </label>
+        <input type="text" id="disciplina" onKeyPress="inserirMascara('disciplina','MT-xx.xxx-IFTM')"placeholder="MT.00.000-IFTM">
+        <input type="button" value="Validar" id="btnValidaDisciplina">
+    </form>
+    <form >
+        <label >e) Código de uma disciplina do IFTM(versão 2)(jwifi): </label>
+        <input type="text" id="disciplina2" onKeyPress="inserirMascara('disciplina2','MT-xx.xxx-IFTM')"placeholder="MT.00.000-IFTM">
+        <input type="button" value="Validar" id="btnValidaDisciplina2">
+    </form>
+    <form >
+        <label >f) Código de uma disciplina do IFTM(versão 3): </label>
+        <input type="text" id="disciplina3">
+        <input type="button" value="Validar" id="btnValidaDisciplina3">
+    </form>
+    <form >
+        <label >g) Código de uma disciplina do IFTM(versão 4): </label>
+        <input type="text" id="disciplina4">
+        <input type="button" value="Validar" id="btnValidaDisciplina4">
+    </form>
+    <form >
+        <label >h) Nome de campus do IFTM: </label>
+        <input type="text" id="campus">
+        <input type="button" value="Validar" id="btnValidaCampus">
+    </form>
+    <form >
+        <label >i) Telefone (jwifi):</label>
+        <input type="text" id="telefone"  onKeyPress="inserirMascara('telefone','+yy(xx)xxxxx-xxxx')"placeholder="+00(00)00000-0000">
+        <input type="button" value="Validar" id="btnValidaTelefone">
+    </form>
+    <form >
+        <label >j) Telefone (versão 2):</label>
+        <input type="text" id="telefone2">
+        <input type="button" value="Validar" id="btnValidaTelefone2">
+    </form>
+    <form >
+        <label >k) Altura de uma pessoa:</label>
+        <input type="text" id="altura">
+        <input type="button" value="Validar" id="btnValidaAltura">
+    </form>
+    <form >
+        <label >l) Faturamento anual de uma empresa:</label>
+        <input type="text" id="faturamento">
+        <input type="button" value="Validar" id="btnValidaFaturamento">
+    </form>
+    <form >
+        <label >m) Cronômetro (jwifi):</label>
+        <input type="text" id="cronometro" onKeyPress="inserirMascara('cronometro','HH:MM:SS:CC')"placeholder="HH:MM:SS:CC">
+        <input type="button" value="Validar" id="btnValidaCronometro">
+    </form>
+    <form >
+        <label >n) Senha:</label>
+        <input type="text" id="senha">
+        <input type="button" value="Validar" id="btnValidaSenha">
+    </form>
+    <script src="js/script.js"></script>
+    <script src="js/jMaskWiFi.js"></script>
+</body>
+</html>
