@@ -9,6 +9,16 @@ window.addEventListener("DOMContentLoaded", function () {
   let btnCadastro = document.getElementById("btnCadastrar");
   if (btnCadastro) {
     btnCadastro.addEventListener("click", function () {
+      let padrao = /^.....+$/;
+      if (!padrao.test(pwd.value)) {
+        Swal.fire({
+          icon: "warning",
+          title: "Atenção!",
+          text: "A senha tem que ter no minimo 5 caracteres!",
+          confirmButtonColor: "#3085d6",
+        });
+        return;
+      }
       if (!user.value || !pwd.value) {
         Swal.fire({
           icon: "warning",
