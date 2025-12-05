@@ -6,7 +6,6 @@
   box-sizing: border-box;
 }
 
-html,
 body {
   width: 100%;
   overflow-x: hidden;
@@ -181,7 +180,9 @@ main {
   text-align: center;
   width: auto;
 }
-
+.main-nivel {
+  margin-top: 40px;
+}
 .form-nivel {
   display: flex;
   flex-direction: column;
