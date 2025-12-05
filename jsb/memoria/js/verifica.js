@@ -67,7 +67,7 @@ window.addEventListener("DOMContentLoaded", function () {
       }
 
       if (consultarUser(CHAVE, { usuario: user.value, senha: pwd.value })) {
-        localStorage.setItem("logado", "true");
+        sessionStorage.setItem("logado", "true");
 
         Swal.fire({
           icon: "success",

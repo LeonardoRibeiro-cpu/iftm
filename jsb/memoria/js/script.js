@@ -11,8 +11,13 @@ window.addEventListener("DOMContentLoaded", function () {
   btnVoltar.addEventListener("click", function () {
     window.location.href = "nivel.html";
   });
-  const logado = localStorage.getItem("logado");
+  const logado = sessionStorage.getItem("logado");
   if (logado !== "true") {
+    Swal.fire({
+      icon: "warning",
+      title: "Falha de login",
+      text: "Precisa de login para acessar o jogo.",
+    });
     window.location.href = "index.html";
   }
 
