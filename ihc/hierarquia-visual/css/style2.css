@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&display=swap');
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--color-text);
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #334faa;
+
+}
+
+:root {
+    /* Espaçamentos */
+    --internal-space: 10px;
+
+    /* Espaçamentos */
+    --space-0: 0px;
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    --space-9: 80px;
+    --space-10: 96px;
+
+    /* Layout */
+    --max-width-container: 1250px;
+    --border-main-title: 25px;
+    --border-box: 10px;
+
+    /* Cores */
+    --bg-emphasis: rgb(241, 241, 241);
+    --color-text: #152660;
+
+    /* --color-text: blue; */
+    --color-buttons: #AF872D;
+
+    /* Tamanho das fontes*/
+    --font-subtitle1:38px;
+    --font-subtitle2: 24px;
+    --font-paragraph: 16px;
+}
+
+body p {
+    font-size:var(--font-paragraph);
+   text-align: left;
+    margin-bottom: var(--space-3);
+}
+
+h2{
+    margin: var(--space-6);
+    font-size: var(--font-subtitle1);
+}
+h3{
+  margin-bottom: var(--space-2);
+    font-size: var(--font-subtitle2);
+}
+.container {
+    
+    max-width: var(--max-width-container);
+    margin: auto;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+   margin-bottom: var(--space-6);
+}
+.cards-grid div{
+    border: 8px solid  #152660;
+    padding: var(--space-5);
+    border-radius: var(--space-5);
+     background-color: white;
+    
+}
+
+body p, .cards-grid li {
+    line-height: 1.5;
+}
+.cards-grid li {
+    margin-bottom: var(--space-2); 
+}
+section img {
+    width: 96px;
+    margin-bottom: var(--space-4);
+
+}
+
+section{
+    background-color: #cfa33a;
+    width: 100%;
+    padding: var(--space-7);
+}
+.cards-grid ul {
+    list-style-position: inside;
+    padding-left: 0; 
+    text-align: justify;
+    margin-top: var(--space-3);
+    margin-bottom: var(--space-4);
+}
