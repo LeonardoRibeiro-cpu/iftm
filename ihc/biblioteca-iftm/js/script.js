@@ -17,20 +17,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let controladorBusca = null;
 
+    const nomesCriterios = {
+        autor: "Autor(es)",
+        titulo: "Título(s)",
+        todos: "Pesquisa geral"
+    };
+
+    const mensagensCampoVazio = {
+        autor: "O campo Autor(es) está vazio. Digite o nome de pelo menos um autor para buscar.",
+        titulo: "O campo Título(s) está vazio. Digite pelo menos um título para buscar.",
+        todos: "O campo Pesquisa geral está vazio. Digite algo para buscar."
+    };
+
     botoesRadio.forEach(radio => {
         radio.addEventListener("change", (e) => {
             limparErro();
             const val = e.target.value;
 
-            if (val === "todos") {
-                campoBusca.placeholder = "Digite termos de busca, título ou autor(es), palavras-chave(s)...";
-                dicaCampo.innerHTML = "💡 Pesquisa geral em todo o catálogo (aceita um ou mais autores e titulos por vírgula).";
-            } else if (val === "autor") {
+            if (val === "autor") {
                 campoBusca.placeholder = "Digite o(s) nome(s) do(s) autor(es)... (ex: Machado de Assis)";
                 dicaCampo.innerHTML = "💡 Você pode buscar por <strong>um ou mais autores</strong> (separados por vírgula).";
             } else if (val === "titulo") {
                 campoBusca.placeholder = "Digite o(s) título(s) da publicação... (ex: Dom Casmurro, Iracema)";
-               dicaCampo.innerHTML = "💡 Você pode buscar por <strong>um ou mais títulos</strong> (separados por vírgula).";
+                dicaCampo.innerHTML = "💡 Você pode buscar por <strong>um ou mais títulos</strong> (separados por vírgula).";
+            } else if (val === "todos") {
+                campoBusca.placeholder = "Digite termos de busca, título(s) ou autor(es), palavras-chave(s)...";
+                dicaCampo.innerHTML = "💡 Pesquisa geral em todo o catálogo (separe vários termos por vírgula).";
             }
         });
     });
@@ -45,16 +57,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
     formularioBusca.addEventListener("submit", (e) => {
         e.preventDefault();
-        const termo = campoBusca.value.trim();
 
-        if (!termo) {
-            mostrarErro("Por favor, digite algum termo para realizar a busca.");
+        const termo = campoBusca.value.trim();
+        const criterio = document.querySelector('input[name="criterio"]:checked').value;
+
+        // Vazio, ou só vírgulas/aspas (ex: ", ,")
+        const temConteudo = termo
+            .split(",")
+            .some(parte => parte.replace(/"/g, "").trim().length > 0);
+
+        if (!temConteudo) {
+            mostrarErro(mensagensCampoVazio[criterio]);
             campoBusca.focus();
             return;
         }
 
         limparErro();
-        abrirModalConfirmacaoEnvio(termo);
+        executarBusca(termo, criterio, nomesCriterios[criterio]);
     });
 
     function abrirModalConfirmacaoLimpar() {
@@ -77,29 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
-    function abrirModalConfirmacaoEnvio(termo) {
-        const criterio = document.querySelector('input[name="criterio"]:checked').value;
-        const nomesCriterios = { todos: "Todos os campos", autor: "Autor(es)", titulo: "Título" };
-
-        tituloModal.textContent = "Confirmar Pesquisa";
-        corpoModal.innerHTML = `<p>Deseja realizar a busca em <strong>${nomesCriterios[criterio]}</strong> pelo termo: "<strong>${escaparHtml(termo)}</strong>"?</p>`;
-
-        rodapeModal.innerHTML = `
-            <button type="button" id="btn-modal-nao" class="btn-modal-comum">Não, revisar</button>
-            <button type="button" id="btn-modal-sim" class="btn-modal-destaque">Sim, buscar</button>
-        `;
-
-        modalContainer.classList.remove("esconde");
-
-        document.getElementById("btn-modal-sim").focus();
-
-        document.getElementById("btn-modal-nao").onclick = () => fecharModal();
-        document.getElementById("btn-modal-sim").onclick = () => {
-            executarBusca(termo, criterio, nomesCriterios[criterio]);
-            fecharModal();
-        };
-    }
-
     btnAjuda.addEventListener("click", () => {
         tituloModal.textContent = "Como realizar pesquisas";
         corpoModal.innerHTML = `
@@ -109,9 +105,9 @@ document.addEventListener("DOMContentLoaded", () => {
             </p>
             <p><strong>Opções de Busca:</strong></p>
             <ul>
-                <li><strong>Todos os campos:</strong> Pesquisa livre por título, autores ou palavras-chave.</li>
                 <li><strong>Autor(es):</strong> Busca por autores (aceita múltiplos nomes separados por vírgula).</li>
-             <li><strong>Título(s):</strong> Busca focada no nome da obra (aceita múltiplos títulos separados por vírgula).</li>
+                <li><strong>Título(s):</strong> Busca focada no nome da obra (aceita múltiplos títulos separados por vírgula).</li>
+                <li><strong>Pesquisa geral:</strong> Pesquisa livre por título, autores ou palavras-chave.</li>
             </ul>
         `;
         rodapeModal.innerHTML = `<button type="button" id="btn-modal-ok" class="btn-modal-destaque">Entendido</button>`;
@@ -130,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
         limparErro();
         document.querySelector('input[value="todos"]').checked = true;
         campoBusca.placeholder = "Digite termos de busca, título(s) ou autor(es), palavras-chave(s)...";
-        dicaCampo.innerHTML = "💡 Pesquisa geral em todo o catálogo (aceita um ou mais autores por vírgula).";
+        dicaCampo.innerHTML = "💡 Pesquisa geral em todo o catálogo (separe vários termos por vírgula).";
 
         painelResultados.innerHTML = `
             <div class="estado-inicial">
@@ -141,8 +137,6 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         campoBusca.focus();
     }
-
-
 
     function montarConsulta(termo, criterio) {
         const partes = termo
@@ -156,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (criterio === "titulo") {
             return partes.map(t => `title:(${t})`).join(" OR ");
         }
-        return partes.join(" ");
+        return partes.map(p => `(${p})`).join(" OR ");
     }
 
     async function executarBusca(termo, criterio, criterioNome) {
@@ -170,6 +164,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p>Consultando o catálogo da Open Library.</p>
             </div>
         `;
+        rolarParaResultados();
 
         const url = "https://openlibrary.org/search.json?" + new URLSearchParams({
             q: montarConsulta(termo, criterio),
@@ -182,8 +177,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!resp.ok) throw new Error("HTTP " + resp.status);
             const dados = await resp.json();
             renderizarResultados(dados.docs || [], dados.numFound || 0, termo, criterioNome);
+            rolarParaResultados();
         } catch (erro) {
-            if (erro.name === "AbortError") return; 
+            if (erro.name === "AbortError") return;
             console.error(erro);
             painelResultados.innerHTML = `
                 <div class="estado-vazio">
@@ -239,7 +235,9 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     }
 
-  
+    function rolarParaResultados() {
+        painelResultados.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
 
     function fecharModal() {
         modalContainer.classList.add("esconde");
