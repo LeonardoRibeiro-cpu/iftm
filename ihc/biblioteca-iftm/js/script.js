@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (val === "todos") {
                 campoBusca.placeholder = "Digite termos de busca, título ou autor(es), palavras-chave(s)...";
-                dicaCampo.innerHTML = "💡 Pesquisa geral em todo o catálogo (aceita um ou mais autores por vírgula).";
+                dicaCampo.innerHTML = "💡 Pesquisa geral em todo o catálogo (aceita um ou mais autores e titulos por vírgula).";
             } else if (val === "autor") {
                 campoBusca.placeholder = "Digite o(s) nome(s) do(s) autor(es)... (ex: Machado de Assis)";
                 dicaCampo.innerHTML = "💡 Você pode buscar por <strong>um ou mais autores</strong> (separados por vírgula).";
