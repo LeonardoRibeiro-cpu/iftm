@@ -32,16 +32,10 @@
             </div>
 
             <form id="formulario-busca" novalidate>
-                
 
                 <div class="grupo-criterios">
                     <span class="rotulo-campo">Buscar por:</span>
                     <div class="opcoes-radio" role="radiogroup" aria-label="Selecione o critério de busca">
-                        <label class="opcao-chip">
-                            <input type="radio" name="criterio" value="todos" checked>
-                            <span>🔍 Todos os campos</span>
-                        </label>
-
                         <label class="opcao-chip">
                             <input type="radio" name="criterio" value="autor">
                             <span>👤 Autor(es)</span>
@@ -49,35 +43,38 @@
 
                         <label class="opcao-chip">
                             <input type="radio" name="criterio" value="titulo">
-                            <span>📖 Título</span>
+                            <span>📖 Título(s)</span>
+                        </label>
+
+                        <label class="opcao-chip">
+                            <input type="radio" name="criterio" value="todos" checked>
+                            <span>🔍 Pesquisa geral</span>
                         </label>
                     </div>
                 </div>
 
-           
                 <div class="container-entrada">
                     <div class="campo-wrap">
-                        <input 
-                            type="text" 
-                            id="campo-busca" 
+                        <input
+                            type="text"
+                            id="campo-busca"
                             class="campo-busca"
-                            placeholder="Digite termos de busca, título ou autor(es)..." 
+                            placeholder="Digite termos de busca, título(s) ou autor(es), palavras-chave(s)..."
                             autocomplete="off"
                         >
-
                     </div>
-                    
-                 
+
                     <div class="rodape-campo">
                         <span id="dica-campo" class="texto-dica">
-                            💡 Pesquisa geral em todo o catálogo (aceita um ou mais autores por vírgula).
+                            💡 Pesquisa geral em todo o catálogo (separe vários termos por vírgula).
                         </span>
                         <span id="msg-erro" class="msg-erro esconde" role="alert"></span>
                     </div>
                 </div>
+
                 <div class="acoes-formulario">
                     <button type="button" id="btn-resetar" class="btn-secundario">Limpar campos</button>
-                    
+
                     <button type="submit" id="btn-submeter" class="btn-buscar">
                         <span>Buscar no Acervo</span>
                     </button>
@@ -110,7 +107,6 @@
             <div id="corpo-modal" class="corpo-modal">
             </div>
             <div id="rodape-modal" class="rodape-modal">
-             
             </div>
         </div>
     </div>
